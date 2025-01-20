@@ -1,15 +1,10 @@
-package mainPageTests;
-import dev.failsafe.internal.util.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
 import pages.itemPage;
 import pages.mainPage;
 
-import java.time.Duration;
-
-public class mainPageGeneralTests {
+public class mainPageGeneralTest {
     private mainPage mainPage;
     private itemPage itemPage;
 
