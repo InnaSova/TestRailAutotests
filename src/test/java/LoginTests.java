@@ -1,11 +1,13 @@
 
+import listeners.TestRailIntegration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.itemPage;
 import pages.mainPage;
 
-public class mainPageGeneralTest {
+public class LoginTests {
     private mainPage mainPage;
     private itemPage itemPage;
 
@@ -14,8 +16,9 @@ public class mainPageGeneralTest {
      * карток із бургерами, перевірка інформації про бургери, додавання бургеру в корзину
      */
     @Test
-    public void t_01_checkingGeneralInfoTest(){
+    public void t_01_Test() {
         setUp();
+
         //перевірка наявності карточки із бургером Tribute Burger
         mainPage.wait(3);
         mainPage.assertIsDisplayed();
@@ -49,8 +52,9 @@ public class mainPageGeneralTest {
     * Тест перевіряє роботу пагінації на головній сторінці
     */
     @Test
-    public void t_02_checkPagination(){
+    public void t_02_Test() {
         setUp();
+
         mainPage.wait(5);
         //перевірка кліків до останньої сторінки
         mainPage.clickRightPaginationButton();
@@ -80,7 +84,7 @@ public class mainPageGeneralTest {
      * Тест перевіряє додавання окремого товару в корзину. Перевірка підтвердження покупки
      */
     @Test
-    public void t_03_addAndBuyItem(){
+    public void t_03_Test() {
         setUp();
         //додавання бургера в корзину
         mainPage.wait(5);
@@ -102,6 +106,24 @@ public class mainPageGeneralTest {
         mainPage.wait(5);
         //перевірка повернення на головну сторінку
         mainPage.assertIsDisplayed();
+    }
+
+    @Test
+    public void t_04_Test() {
+        setUp();
+        //додавання бургера в корзину
+        mainPage.wait(5);
+        mainPage.addItem();
+        mainPage.assertTextPresent("Cart 1");
+    }
+
+    @Test
+    public void t_05_Test() {
+        setUp();
+        //додавання бургера в корзину
+        mainPage.wait(5);
+        mainPage.addItem();
+        mainPage.assertTextPresent("Cart 1");
     }
 
     public void setUp() {
