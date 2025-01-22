@@ -8,8 +8,8 @@
     <!-- Набор тестов -->
     <test name="LoginTests">
         <classes>
-            <class name="mainPageGeneralTest" />
-            <class name="ClassTest_02" />
+            <class name="LoginTests" />
+<!--            <class name="CalculationTests" />-->
         </classes>
     </test>
 </suite>
