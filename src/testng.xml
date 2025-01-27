@@ -6,7 +6,7 @@
     </listeners>
 
     <!-- Набор тестов -->
-    <test name="LoginTests">
+    <test name="MainTests">
         <classes>
             <class name="LoginTests" />
 <!--            <class name="CalculationTests" />-->

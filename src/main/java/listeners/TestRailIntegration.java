@@ -54,6 +54,7 @@ public class TestRailIntegration {
         os.flush();
 
         if (conn.getResponseCode() != 200) {
+            System.out.println(conn.getResponseMessage());
             throw new RuntimeException("Failed to add result. HTTP error code: " + conn.getResponseCode());
         }
 

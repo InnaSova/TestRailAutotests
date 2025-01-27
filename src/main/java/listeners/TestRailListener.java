@@ -13,7 +13,7 @@ public class TestRailListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         try {
-            int projectId = 1; // Замените на ваш Project ID
+            int projectId = 2; // Замените на ваш Project ID
             LocalDateTime now = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             String formattedDateTime = now.format(formatter);
